@@ -1,0 +1,38 @@
+/* «Алай» медресе — дизайн системасы. Mobile First */
+:root{--g:#14442f;--g2:#1f6b49;--gold:#b8923a;--bg:#fff;--soft:#f2f3f0;--tx:#1d2420;--mu:#5a635d;--r:10px;--w:1120px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:clamp(16px,1.6vw,18px)/1.65 "Noto Serif","PT Serif",Georgia,serif;color:var(--tx);background:var(--bg);overflow-x:hidden}
+h1,h2,h3,.btn,nav a,th{font-family:"Noto Sans","PT Sans",Arial,sans-serif}
+h1{font-size:clamp(1.8rem,5vw,3rem);line-height:1.2}h2{font-size:clamp(1.4rem,3.5vw,2rem);margin-bottom:1rem;color:var(--g)}h3{font-size:1.1rem;margin-bottom:.3rem}
+a{color:var(--g2)}img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:var(--w);margin:auto;padding:0 1rem}
+section{padding:2.5rem 0}.alt{background:var(--soft)}
+header.site{background:var(--g);color:#fff;position:sticky;top:0;z-index:10}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem;min-height:64px}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font:700 .95rem "Noto Sans",Arial,sans-serif}
+.brand img{height:40px}.brand .lt{border:2px solid var(--gold);color:var(--gold);border-radius:50%;width:40px;height:40px;display:grid;place-items:center}
+#menu-btn{background:none;border:1px solid #fff8;color:#fff;font-size:1.4rem;min-width:44px;min-height:44px;border-radius:8px}
+nav{display:none;width:100%}nav.open{display:block}
+nav a{display:block;color:#fff;text-decoration:none;padding:.7rem 0;border-top:1px solid #fff2}
+nav a[aria-current]{color:var(--gold)}nav a.btn{color:#1d1600;text-align:center}
+.hero{background:linear-gradient(#14442fcc,#14442fdd),url(../images/hero.jpg) center/cover var(--g);color:#fff;padding:4rem 0}
+.hero p{max-width:60ch;margin:1rem 0 1.5rem}
+.btn{display:inline-block;padding:.8rem 1.3rem;min-height:44px;border-radius:var(--r);background:var(--gold);color:#1d1600;font-weight:700;text-decoration:none;border:0;cursor:pointer;margin:.2rem .3rem .2rem 0}
+.btn.o{background:none;border:2px solid currentColor;color:inherit}
+.grid{display:grid;gap:1rem}
+.card{background:#fff;border:1px solid #dfe3dc;border-top:4px solid var(--gold);border-radius:var(--r);padding:1.1rem}
+.card img{border-radius:6px;margin-bottom:.7rem;aspect-ratio:3/2;object-fit:cover;width:100%;background:var(--soft)}
+.muted{color:var(--mu)}.tmp{background:#fff6dc;border-left:4px solid var(--gold);padding:.5rem .8rem;margin:.6rem 0;font:.9rem "Noto Sans",Arial,sans-serif;color:var(--tx)}
+.tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}.tabs .btn{background:#fff;border:2px solid var(--g);color:var(--g)}.tabs .btn[aria-pressed=true]{background:var(--g);color:#fff}
+table{width:100%;border-collapse:collapse;background:#fff}th,td{padding:.6rem;border:1px solid #dfe3dc;text-align:left}th{background:var(--g);color:#fff}
+details{background:#fff;border:1px solid #dfe3dc;border-radius:var(--r);padding:.8rem 1rem;margin-bottom:.5rem}summary{cursor:pointer;font-weight:700;font-family:"Noto Sans",Arial,sans-serif}
+.gal{grid-template-columns:repeat(2,1fr)}.gal button{border:0;padding:0;background:none;cursor:zoom-in}.gal img{aspect-ratio:1;object-fit:cover;width:100%;border-radius:8px;background:var(--soft)}
+#lb{position:fixed;inset:0;background:#000d;display:none;place-items:center;z-index:50;padding:1rem}#lb.open{display:grid}#lb img{max-height:90vh}
+footer.site{background:#0e3222;color:#dfe8e2;padding:2rem 0;font-size:.95rem}footer a{color:var(--gold)}
+@media(min-width:768px){.grid.c2,.grid.c3{grid-template-columns:repeat(2,1fr)}.gal{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1024px){#menu-btn{display:none}nav{display:flex!important;width:auto;gap:1rem;align-items:center}nav a{border:0;padding:.4rem 0;font-size:.9rem}.grid.c3{grid-template-columns:repeat(3,1fr)}.gal{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:600px){.rt thead{display:none}.rt tr{display:block;margin-bottom:.7rem;border:1px solid #dfe3dc}.rt td{display:block;border:0;padding:.3rem .6rem}.rt td::before{content:attr(data-l)": ";font-weight:700}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{header.site,footer.site,.tabs,.noprint,.hero{display:none!important}body{font-size:11pt}}
